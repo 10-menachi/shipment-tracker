@@ -5,8 +5,6 @@ from models import Buyers, Customers, Orders, Sellers, Shipments, db
 from utils import random_number_generator, random_string_generator
 
 app = Flask(__name__)
-
-app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:Christian2002@localhost/shipment-tracker'
 db.init_app(app)
 
