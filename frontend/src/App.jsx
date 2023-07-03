@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
+import AddCustomer from "./components/AddCustomer";
 import Customers from "./components/Customers";
 import HomePage from "./components/HomePage";
 import Orders from "./components/Orders";
@@ -119,6 +120,7 @@ const App = () => {
         }
         />
         <Route path="/customers" element={<Customers customers={customers} />} />
+        <Route path="/customers/add_customer" element={<AddCustomer />} />
       </Routes>
     </>
   );
