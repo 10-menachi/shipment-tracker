@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customers</title>
+</head>
+
+<body>
+
+  <h2>Customers</h2>
+
+  <script>
+    let customers_list = []
+    const getCustomers = async () => {
+      const customers = await fetch('http://localhost:5000/customers', {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      })
+        .then(res => res.json())
+        .then(data => customers_list = data)
+        .catch(err => console.log(err));
+
+      return customers_list
+    }
+    console.log(getCustomers());
+  </script>
+</body>
+
+</html>
