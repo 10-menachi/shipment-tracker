@@ -84,7 +84,7 @@ def shipments():
 def add_customer():
     pass
 
-@app.route('buyers/add_buyer')
+@app.route('/buyers/add_buyer')
 def add_buyer():
     pass
 
@@ -96,7 +96,7 @@ def add_seller():
 def add_order():
     pass
 
-@app.route('shipments/add_shipment')
+@app.route('/shipments/add_shipment')
 def add_shipment():
     pass
 
