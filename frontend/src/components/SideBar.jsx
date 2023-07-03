@@ -107,7 +107,7 @@ const SideBar = ({
         </div>
         <div className="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-blue-600 text-white">
           <BiHomeAlt />
-          <Link to="/" className="text-[15px] ml-4 text-gray-200 font-bold">
+          <Link to="/customers/add_customer" className="text-[15px] ml-4 text-gray-200 font-bold">
             Add Customer
           </Link>
         </div>

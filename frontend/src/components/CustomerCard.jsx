@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import User from '../assets/user_icon.webp';
 
-const CustomerCard = ({ name }) => {
+const CustomerCard = ({ name, email }) => {
   return (
     <div
       className="block rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700 max-w-sm">
@@ -21,7 +21,8 @@ const CustomerCard = ({ name }) => {
       <div className="p-6">
         <h5
           className="mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50">
-          {name}
+          {name} <br />
+          <span className='opacity-25'>{email}</span>
         </h5>
         <p className="mb-4 text-base text-neutral-600 dark:text-neutral-200">
           Some quick example text to build on the card title and make up the
@@ -41,6 +42,7 @@ const CustomerCard = ({ name }) => {
 
 CustomerCard.propTypes = {
   name: PropTypes.string.isRequired,
+  email: PropTypes.string.isRequired,
 };
 
 export default CustomerCard
